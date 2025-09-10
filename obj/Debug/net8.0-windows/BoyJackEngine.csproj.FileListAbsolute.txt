@@ -1,0 +1,14 @@
+/home/runner/workspace/obj/Debug/net8.0-windows/BoyJackEngine.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/workspace/obj/Debug/net8.0-windows/BoyJackEngine.AssemblyInfoInputs.cache
+/home/runner/workspace/obj/Debug/net8.0-windows/BoyJackEngine.AssemblyInfo.cs
+/home/runner/workspace/obj/Debug/net8.0-windows/BoyJackEngine.csproj.CoreCompileInputs.cache
+/home/runner/workspace/bin/Debug/net8.0-windows/BoyJackEngine
+/home/runner/workspace/bin/Debug/net8.0-windows/BoyJackEngine.deps.json
+/home/runner/workspace/bin/Debug/net8.0-windows/BoyJackEngine.runtimeconfig.json
+/home/runner/workspace/bin/Debug/net8.0-windows/BoyJackEngine.dll
+/home/runner/workspace/bin/Debug/net8.0-windows/BoyJackEngine.pdb
+/home/runner/workspace/obj/Debug/net8.0-windows/BoyJackEngine.dll
+/home/runner/workspace/obj/Debug/net8.0-windows/refint/BoyJackEngine.dll
+/home/runner/workspace/obj/Debug/net8.0-windows/BoyJackEngine.pdb
+/home/runner/workspace/obj/Debug/net8.0-windows/BoyJackEngine.genruntimeconfig.cache
+/home/runner/workspace/obj/Debug/net8.0-windows/ref/BoyJackEngine.dll

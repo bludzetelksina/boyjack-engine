@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <ApplicationIcon>Assets\icons\boyjack_engine_32.ico</ApplicationIcon>
+    <AssemblyTitle>BoyJack Engine</AssemblyTitle>
+    <AssemblyDescription>Simple 2D Game Engine for C#</AssemblyDescription>
+    <AssemblyCompany>BoyJack Engine Team</AssemblyCompany>
+    <AssemblyProduct>BoyJack Engine</AssemblyProduct>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+    <FileVersion>0.1.0.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="8.0.0" />
+    <PackageReference Include="System.Windows.Extensions" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\icons\boyjack_engine_32.ico" />
+  </ItemGroup>
+
+</Project>

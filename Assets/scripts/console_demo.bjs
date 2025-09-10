@@ -1,0 +1,47 @@
+// console_demo.bjs - BoyJack Engine Console Demo Script
+
+scene = "Game"
+
+on start:
+    set_window_title("BoyJack Engine Console Demo")
+    player.x = 10
+    player.y = 10
+    player.speed = 1
+
+on update:
+    if key_pressed("RIGHT"):
+        player.x += player.speed
+    if key_pressed("LEFT"):
+        player.x -= player.speed
+    if key_pressed("DOWN"):
+        player.y += player.speed
+    if key_pressed("UP"):
+        player.y -= player.speed
+    
+    // Keep player on screen (80x25 console)
+    if player.x < 1:
+        player.x = 1
+    if player.x > 75:
+        player.x = 75
+    if player.y < 7:
+        player.y = 7
+    if player.y > 22:
+        player.y = 22
+
+on draw:
+    draw_text("=== BOYJACK ENGINE CONSOLE DEMO ===", 1, 1, "cyan")
+    draw_text("Use ARROW KEYS to move the [@] character", 1, 2, "white")
+    draw_text("Press ESC to quit", 1, 3, "white")
+    draw_text("------------------------------------", 1, 4, "gray")
+    
+    // Player
+    draw_sprite("@", player.x, player.y, "yellow")
+    
+    // Game world elements
+    draw_rectangle(5, 15, 20, 3, "green")
+    draw_rectangle(35, 12, 15, 5, "red")
+    draw_rectangle(60, 18, 10, 4, "blue")
+    
+    // UI
+    draw_text("Position: " + player.x + "," + player.y, 1, 23, "green")
+    draw_text("BoyJack Engine v0.1.0", 55, 23, "magenta")

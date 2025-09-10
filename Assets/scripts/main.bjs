@@ -1,0 +1,65 @@
+// main.bjs - BoyJack Engine Demo Script
+
+scene = "MainMenu"
+
+on start:
+    set_window_title("BoyJack Engine Demo - Platformer")
+    set_resolution(800, 600)
+    load_image("player", "Assets/sprites/player.png")
+    player.x = 100
+    player.y = 300
+    player.speed = 5
+
+on update:
+    if scene == "MainMenu":
+        update_main_menu()
+    elif scene == "Game":
+        update_game()
+
+on draw:
+    if scene == "MainMenu":
+        draw_main_menu()
+    elif scene == "Game":
+        draw_game()
+
+func update_main_menu():
+    if key_pressed("ENTER"):
+        scene = "Game"
+        player.x = 50
+        player.y = 300
+
+func draw_main_menu():
+    draw_text("BOYJACK ENGINE DEMO", 250, 200, "white")
+    draw_text("Press ENTER to Start", 300, 250, "white")
+    draw_text("Use ARROW KEYS to move", 280, 300, "white")
+    draw_text("Press SPACE to jump", 290, 330, "white")
+
+func update_game():
+    if key_down("RIGHT"):
+        player.x += player.speed
+    if key_down("LEFT"):
+        player.x -= player.speed
+    if key_down("UP"):
+        player.y -= player.speed
+    if key_down("DOWN"):
+        player.y += player.speed
+    
+    // Keep player on screen
+    if player.x < 0:
+        player.x = 0
+    if player.x > 750:
+        player.x = 750
+    if player.y < 0:
+        player.y = 0
+    if player.y > 550:
+        player.y = 550
+
+func draw_game():
+    draw_text("BoyJack Engine - In Game", 50, 50, "white")
+    draw_text("X: " + player.x + " Y: " + player.y, 50, 80, "white")
+    draw_sprite("player", player.x, player.y)
+    
+    // Draw some decorative elements
+    draw_rectangle(0, 580, 800, 20, "green", true)
+    draw_rectangle(200, 500, 100, 80, "red", true)
+    draw_rectangle(500, 450, 100, 130, "blue", true)
